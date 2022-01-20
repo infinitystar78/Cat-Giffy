@@ -7,6 +7,7 @@
   * Xcode 13.2 / Swift 5.5 
   * iOS >= 15.0 
   * Swift Package Manager
+  * Create a new API key at the Cat API website and create a new Xcode config file with the entry API_KEY = $myAPIKey.
 
 
 # Objectives
@@ -49,4 +50,6 @@ For the display of static images, the new AsyncImage struct is used to display i
 
 Tools:
 
-A gitignore file has been included to exclude the config file from the commit for security purposes.
+* A gitignore file has been included to exclude the config file from the commit for security purposes.
+* NOTE: the api key has been stored in a config file, which is not in this repo as a security measure, to run the app, you should generate a new api key and create a new config file.
+
