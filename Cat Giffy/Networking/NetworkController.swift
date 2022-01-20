@@ -5,7 +5,6 @@
 //  Created by M W on 19/01/2022.
 //
 
-
 import Combine
 import Foundation
 import SwiftUI
@@ -14,7 +13,6 @@ enum ImageType {
     case images
     case gifs
 }
-
 
 protocol NetworkControllerProtocol: AnyObject {
     typealias Headers = [String: Any]
@@ -48,7 +46,7 @@ final class NetworkController: NetworkControllerProtocol {
 protocol CatLogicControllerProtocol: AnyObject {
     var networkController: NetworkControllerProtocol { get }
 
-    func getCats(page: Int, imageType:ImageType) -> AnyPublisher<[Cat], Error>
+    func getCats(page: Int, imageType: ImageType) -> AnyPublisher<[Cat], Error>
 }
 
 final class CatLogicController: CatLogicControllerProtocol {
@@ -58,7 +56,7 @@ final class CatLogicController: CatLogicControllerProtocol {
         self.networkController = networkController
     }
 
-    func getCats(page: Int, imageType:ImageType) -> AnyPublisher<[Cat], Error> {
+    func getCats(page: Int, imageType: ImageType) -> AnyPublisher<[Cat], Error> {
         let endpoint = Endpoint.search(count: 100, page: page, imageType: imageType)
         print("debug.get.cats=\(endpoint.url)")
         return networkController.get(type: [Cat].self,

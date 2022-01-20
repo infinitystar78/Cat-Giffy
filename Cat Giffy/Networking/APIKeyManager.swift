@@ -8,7 +8,6 @@
 import Foundation
 
 struct APIKeyManager {
-    
     var apiKey: String {
         if let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String {
             return apiKey
@@ -16,6 +15,4 @@ struct APIKeyManager {
             return ""
         }
     }
-    
-    
 }

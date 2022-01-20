@@ -11,16 +11,16 @@ struct ContentView: View {
     @StateObject private var model = ContentViewModel()
     @State var imageTypeSelection = 0
     @State var imageType = ImageType.gifs
-    
+
     func changeImageType(newValue: Int) {
         if newValue == 0 {
             imageType = .gifs
-            model.getImages(imageType: self.imageType)
+            model.getImages(imageType: imageType)
         }
 
         if newValue == 1 {
             imageType = .images
-            model.getImages(imageType: self.imageType)
+            model.getImages(imageType: imageType)
         }
     }
 
@@ -35,16 +35,16 @@ struct ContentView: View {
             }
             .pickerStyle(.segmented)
             .onChange(of: imageTypeSelection) { newValue in
-               changeImageType(newValue: newValue)
+                changeImageType(newValue: newValue)
             }
 
             List {
                 ForEach(model.cats) { cat in
-
                     if imageTypeSelection == 0 {
-                        GifView(urlString: cat.url!)
-                            .frame(width: 300, height: CGFloat(cat.height!), alignment: .center)
-                        // .frame(maxWidth: 300, maxHeight: 600)
+                        if let height = cat.height {
+                            GifView(urlString: cat.url!)
+                                .frame(width: 300, height: CGFloat(height), alignment: .center)
+                        }
                     }
 
                     if imageTypeSelection == 1 {

@@ -12,7 +12,6 @@ struct Endpoint {
     var queryItems: [URLQueryItem] = []
 }
 
-
 extension Endpoint {
     var url: URL {
         var components = URLComponents()
@@ -41,7 +40,7 @@ extension Endpoint {
 }
 
 extension Endpoint {
-    static func search(count: Int, page: Int, imageType:ImageType) -> Self {
+    static func search(count: Int, page: Int, imageType: ImageType) -> Self {
         var type: String
         switch imageType {
         case .images:
@@ -49,7 +48,7 @@ extension Endpoint {
         case .gifs:
             type = "gif"
         }
-        
+
         return Endpoint(path: "/search",
                         queryItems: [
                             URLQueryItem(name: "limit",
@@ -60,7 +59,6 @@ extension Endpoint {
                                          value: "random"),
                             URLQueryItem(name: "page",
                                          value: "\(page)"),
-                            
                         ]
         )
     }
