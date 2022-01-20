@@ -13,10 +13,14 @@ class ContentViewModel: ObservableObject {
     var subscriptions = Set<AnyCancellable>()
     @Published var cats = [Cat]()
     var currentPage = 0
+    var headlineTitle = "Todays Kitties"
+    var pickerTitle = "Select Image Type?"
+    var loadingTitle = "Loading more cool cats"
+    var placeholderImageName = "photo"
 
-    func getImages() {
+    func getImages(imageType: ImageType) {
         let catLogicController = CatLogicController(networkController: networkController)
-        catLogicController.getCats(page: currentPage)
+        catLogicController.getCats(page: currentPage, imageType: imageType)
             .sink(receiveCompletion: { completion in
                 self.currentPage += 1
                 switch completion {

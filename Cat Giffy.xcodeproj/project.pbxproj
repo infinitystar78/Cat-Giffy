@@ -14,6 +14,15 @@
 		CE4004B0279632D600C17B23 /* Cat_GiffyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004AF279632D600C17B23 /* Cat_GiffyTests.swift */; };
 		CE4004BA279632D600C17B23 /* Cat_GiffyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004B9279632D600C17B23 /* Cat_GiffyUITests.swift */; };
 		CE4004BC279632D600C17B23 /* Cat_GiffyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004BB279632D600C17B23 /* Cat_GiffyUITestsLaunchTests.swift */; };
+		CE4004CB2796F63800C17B23 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004CA2796F63800C17B23 /* APIKeyManager.swift */; };
+		CE4004CE2797034E00C17B23 /* CustomStringConvertible++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004CD2797034E00C17B23 /* CustomStringConvertible++.swift */; };
+		CE4004D12797038400C17B23 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004D02797038400C17B23 /* Endpoint.swift */; };
+		CE4004D32797935A00C17B23 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004D22797935900C17B23 /* NetworkController.swift */; };
+		CE4004D527979DBB00C17B23 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004D427979DBB00C17B23 /* Cat.swift */; };
+		CE4004D72797AA7C00C17B23 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004D62797AA7C00C17B23 /* ContentViewModel.swift */; };
+		CE4004DE2798983F00C17B23 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE4004DD2798983F00C17B23 /* FLAnimatedImage */; };
+		CE4004E42798995500C17B23 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004E32798995500C17B23 /* GifView.swift */; };
+		CE4004E62798DA0A00C17B23 /* Network_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4004E52798DA0A00C17B23 /* Network_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,16 @@
 		CE4004B5279632D600C17B23 /* Cat GiffyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cat GiffyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4004B9279632D600C17B23 /* Cat_GiffyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat_GiffyUITests.swift; sourceTree = "<group>"; };
 		CE4004BB279632D600C17B23 /* Cat_GiffyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat_GiffyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE4004C82796E40000C17B23 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		CE4004C92796F2F400C17B23 /* Cat-Giffy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cat-Giffy-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CE4004CA2796F63800C17B23 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
+		CE4004CD2797034E00C17B23 /* CustomStringConvertible++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible++.swift"; sourceTree = "<group>"; };
+		CE4004D02797038400C17B23 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CE4004D22797935900C17B23 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		CE4004D427979DBB00C17B23 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		CE4004D62797AA7C00C17B23 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CE4004E32798995500C17B23 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		CE4004E52798DA0A00C17B23 /* Network_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4004DE2798983F00C17B23 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +114,13 @@
 		CE40049D279632D500C17B23 /* Cat Giffy */ = {
 			isa = PBXGroup;
 			children = (
+				CE4004CF2797037100C17B23 /* Networking */,
+				CE4004CC2797033200C17B23 /* Extensions */,
+				CE4004C92796F2F400C17B23 /* Cat-Giffy-Info.plist */,
 				CE40049E279632D500C17B23 /* Cat_GiffyApp.swift */,
-				CE4004A0279632D500C17B23 /* ContentView.swift */,
+				CE4004DF2798990D00C17B23 /* Views */,
+				CE4004E02798991500C17B23 /* Models */,
+				CE4004C82796E40000C17B23 /* Config.xcconfig */,
 				CE4004A2279632D500C17B23 /* Assets.xcassets */,
 				CE4004A4279632D500C17B23 /* Preview Content */,
 			);
@@ -114,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4004AF279632D600C17B23 /* Cat_GiffyTests.swift */,
+				CE4004E52798DA0A00C17B23 /* Network_Tests.swift */,
 			);
 			path = "Cat GiffyTests";
 			sourceTree = "<group>";
@@ -125,6 +151,58 @@
 				CE4004BB279632D600C17B23 /* Cat_GiffyUITestsLaunchTests.swift */,
 			);
 			path = "Cat GiffyUITests";
+			sourceTree = "<group>";
+		};
+		CE4004CC2797033200C17B23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE4004CD2797034E00C17B23 /* CustomStringConvertible++.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE4004CF2797037100C17B23 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE4004CA2796F63800C17B23 /* APIKeyManager.swift */,
+				CE4004D02797038400C17B23 /* Endpoint.swift */,
+				CE4004D22797935900C17B23 /* NetworkController.swift */,
+				CE4004D427979DBB00C17B23 /* Cat.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE4004DF2798990D00C17B23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE4004E22798993000C17B23 /* Accessory Views */,
+				CE4004E12798992400C17B23 /* Main Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE4004E02798991500C17B23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE4004D62797AA7C00C17B23 /* ContentViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE4004E12798992400C17B23 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE4004A0279632D500C17B23 /* ContentView.swift */,
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		CE4004E22798993000C17B23 /* Accessory Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE4004E32798995500C17B23 /* GifView.swift */,
+			);
+			path = "Accessory Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +221,9 @@
 			dependencies = (
 			);
 			name = "Cat Giffy";
+			packageProductDependencies = (
+				CE4004DD2798983F00C17B23 /* FLAnimatedImage */,
+			);
 			productName = "Cat Giffy";
 			productReference = CE40049B279632D500C17B23 /* Cat Giffy.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +296,9 @@
 				Base,
 			);
 			mainGroup = CE400492279632D500C17B23;
+			packageReferences = (
+				CE4004DC2798983F00C17B23 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+			);
 			productRefGroup = CE40049C279632D500C17B23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +341,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4004D72797AA7C00C17B23 /* ContentViewModel.swift in Sources */,
+				CE4004E42798995500C17B23 /* GifView.swift in Sources */,
+				CE4004CB2796F63800C17B23 /* APIKeyManager.swift in Sources */,
+				CE4004D527979DBB00C17B23 /* Cat.swift in Sources */,
 				CE4004A1279632D500C17B23 /* ContentView.swift in Sources */,
+				CE4004D32797935A00C17B23 /* NetworkController.swift in Sources */,
 				CE40049F279632D500C17B23 /* Cat_GiffyApp.swift in Sources */,
+				CE4004CE2797034E00C17B23 /* CustomStringConvertible++.swift in Sources */,
+				CE4004D12797038400C17B23 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4004E62798DA0A00C17B23 /* Network_Tests.swift in Sources */,
 				CE4004B0279632D600C17B23 /* Cat_GiffyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +389,7 @@
 /* Begin XCBuildConfiguration section */
 		CE4004BD279632D600C17B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4004C82796E40000C17B23 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -358,6 +451,7 @@
 		};
 		CE4004BE279632D600C17B23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4004C82796E40000C17B23 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -422,6 +516,7 @@
 				DEVELOPMENT_TEAM = XJCP9X6F2C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cat-Giffy-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +546,7 @@
 				DEVELOPMENT_TEAM = XJCP9X6F2C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cat-Giffy-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -585,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE4004DC2798983F00C17B23 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE4004DD2798983F00C17B23 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE4004DC2798983F00C17B23 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE400493279632D500C17B23 /* Project object */;
 }
